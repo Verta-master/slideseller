@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta  name="viewport" content="width=device-width,initial-scale=1">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <svg style="display:none">
+    <symbol id="icon-search">
+      <circle r="6.80459" transform="matrix(0.707106 0.707107 -0.707106 0.707107 11.0503 11.0776)" stroke-width="1.94417"/>
+      <rect width="7.57115" height="1.94417" transform="matrix(0.707106 0.707108 -0.707106 0.707108 16.0911 15.2018)"/>
+    </symbol>
+    <symbol id="icon-basket">
+      <path d="M26.8 30.8C27 30.6 27.1 30.3 27.1 30L24.8 8.30005C24.7 7.80005 24.3 7.40005 23.8 7.40005H19.7001V6.50005C19.7001 3.40005 17.2 0.800049 14 0.800049C10.9 0.800049 8.30005 3.30005 8.30005 6.50005V7.30005H4.20005C3.70005 7.30005 3.20005 7.70005 3.20005 8.20005L0.800049 30C0.800049 30.3 0.900049 30.6 1.10005 30.8C1.30005 31 1.60005 31.1 1.90005 31.1H26.1C26.4 31.1 26.6 31 26.8 30.8ZM26.8 30.8L26.7001 30.7001L26.8 30.8ZM26.8 30.8L26.7001 30.7001L26.8 30.8ZM10.4 6.50005C10.4 4.50005 12 2.90005 14 2.90005C16 2.90005 17.6 4.50005 17.6 6.50005V7.30005H10.4V6.50005ZM22.8 9.40005L24.9 29H3.00005L5.10005 9.40005H8.30005V11.2C8.30005 11.8 8.80005 12.2 9.30005 12.2C9.90005 12.2 10.3 11.7 10.3 11.2V9.40005H17.5V11.2C17.5 11.8 18 12.2 18.5 12.2C19.1 12.2 19.5 11.7 19.5 11.2V9.40005H22.8Z" stroke-width="0.3"/>
+    </symbol>
+    <symbol id="icon-cabinet">
+      <path d="M26.1228 5.28732C23.2616 2.42609 19.4565 0.85 15.4102 0.85C11.3636 0.85 7.55871 2.42609 4.69748 5.28732C1.83625 8.14855 0.260156 11.9534 0.260156 16C0.260156 20.0464 1.83625 23.8514 4.69748 26.7127C7.55871 29.5739 11.3636 31.15 15.4102 31.15C19.4565 31.15 23.2616 29.5739 26.1228 26.7127C28.9841 23.8514 30.5602 20.0464 30.5602 16C30.5602 11.9534 28.9841 8.14855 26.1228 5.28732ZM8.09495 26.852C8.74772 23.3597 11.7934 20.7945 15.4102 20.7945C19.0271 20.7945 22.0726 23.3597 22.7254 26.852C20.6353 28.2654 18.1177 29.0922 15.4102 29.0922C12.7026 29.0922 10.185 28.2654 8.09495 26.852ZM10.7907 14.1172C10.7907 11.57 12.8631 9.49778 15.4102 9.49778C17.9572 9.49778 20.0296 11.5702 20.0296 14.1172C20.0296 16.6642 17.9572 18.7367 15.4102 18.7367C12.8631 18.7367 10.7907 16.6642 10.7907 14.1172ZM19.2771 19.5575C20.9766 18.3463 22.0876 16.3594 22.0876 14.1172C22.0876 10.4352 19.0922 7.43997 15.4102 7.43997C11.7281 7.43997 8.7329 10.4352 8.7329 14.1172C8.7329 16.3594 9.84398 18.3463 11.5432 19.5575C10.6348 19.9625 9.788 20.5111 9.03653 21.1913C7.76077 22.346 6.83316 23.8094 6.33299 25.4246C3.85936 23.0412 2.31797 19.6974 2.31797 16C2.31797 8.78105 8.19121 2.90781 15.4102 2.90781C22.6291 2.90781 28.5023 8.78105 28.5023 16C28.5023 19.6977 26.961 23.0414 24.4873 25.4248C23.9872 23.8096 23.0598 22.3462 21.7838 21.1915C21.0323 20.5114 20.1857 19.9625 19.2771 19.5575Z" stroke-width="0.3"/>
+    </symbol>
+    <symbol id="icon-eye">
+      <path d="M27.9083 8.71924L27.9084 8.7193C28.1639 9.05646 28.1639 9.51466 27.9084 9.85182L27.9083 9.85184C27.7853 10.0141 26.2825 11.9662 23.889 13.8787C21.4971 15.7899 18.2033 17.6714 14.5001 17.6714C10.797 17.6714 7.50318 15.7899 5.11131 13.8787C2.71785 11.9663 1.21506 10.0142 1.09195 9.85217L1.09192 9.85213C0.836046 9.51503 0.836008 9.05644 1.09192 8.71954C1.21506 8.55734 2.71785 6.6052 5.11131 4.69273C7.50318 2.78153 10.797 0.9 14.5001 0.9C18.2033 0.9 21.4971 2.78153 23.889 4.69269C26.2825 6.60512 27.7853 8.55718 27.9083 8.71924ZM14.5001 15.7571C17.1738 15.7571 19.6758 14.5319 21.6877 13.0969C23.6459 11.7003 25.1304 10.1119 25.8442 9.28506C25.1314 8.45763 23.6497 6.8695 21.6927 5.47339C19.6821 4.03892 17.1797 2.81428 14.5001 2.81428C11.8266 2.81428 9.32474 4.03931 7.31281 5.47419C5.35469 6.8707 3.87012 8.45917 3.15601 9.28636C3.86889 10.1138 5.35058 11.7019 7.30749 13.098C9.31817 14.5325 11.8206 15.7571 14.5001 15.7571Z" stroke-width="0.2"/>
+      <path d="M14.5001 4.04286C17.4966 4.04286 19.9408 6.39126 19.9408 9.28574C19.9408 12.1802 17.4966 14.5286 14.5001 14.5286C11.5037 14.5286 9.05944 12.1802 9.05944 9.28574C9.05944 6.39126 11.5037 4.04286 14.5001 4.04286ZM14.5001 12.6143C16.4118 12.6143 17.9606 11.1175 17.9606 9.28574C17.9606 7.45395 16.4117 5.95719 14.5001 5.95719C12.5885 5.95719 11.0397 7.45395 11.0397 9.28574C11.0397 11.1175 12.5885 12.6143 14.5001 12.6143Z" stroke-width="0.2"/>
+    </symbol>
+  </svg>
+  
+  <header class="header">
+    <div class="wrapper header__wrap">
+      <div class="logo">
+        <img src="img/images/logo.png" alt="Logo">
+      </div>
+      <nav class="menu">
+        <button type="button" class="menu__btn"></button>
+        <ul class="menu__list">
+          <li class="menu__item menu__item--dropdown">
+            <a href="#">Инфографика</a>
+            <div class="menu__dropdown">
+              <ul class="menu__sublist">
+                <li class="menu__subitem"><a href="#">Стартап</a></li>
+                <li class="menu__subitem"><a href="#">Пазл</a></li>
+                <li class="menu__subitem"><a href="#">Персонажи</a></li>
+                <li class="menu__subitem"><a href="#">Метафора</a></li>
+                <li class="menu__subitem"><a href="#">3D</a></li>
+                <li class="menu__subitem"><a href="#">Гаджет</a></li>
+                <li class="menu__subitem"><a href="#">Карты</a></li>
+                <li class="menu__subitem"><a href="#">Фото</a></li>
+                <li class="menu__subitem"><a href="#">Тайм-лайм</a></li>
+                <li class="menu__subitem"><a href="#">Процесс</a></li>
+                <li class="menu__subitem"><a href="#">Пирамида</a></li>
+                <li class="menu__subitem"><a href="#">Диаграмма</a></li>
+                <li class="menu__subitem"><a href="#">Таблица</a></li>
+                <li class="menu__subitem"><a href="#">Стрелки</a></li>
+                <li class="menu__subitem menu__subitem--active"><a href="#">Планирование</a></li>
+                <li class="menu__subitem"><a href="#">Анализ</a></li>
+                <li class="menu__subitem"><a href="#">Воронки</a></li>
+                <li class="menu__subitem"><a href="#">Диаграммы</a></li>
+                <li class="menu__subitem"><a href="#">Цитаты</a></li>
+                <li class="menu__subitem"><a href="#">Календарь</a></li>
+                <li class="menu__subitem"><a href="#">Демография</a></li>
+                <li class="menu__subitem"><a href="#">Недвижимость</a></li>
+                <li class="menu__subitem"><a href="#">Логистика</a></li>
+                <li class="menu__subitem"><a href="#">Медицина</a></li>
+                <li class="menu__subitem"><a href="#">Образование</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item"><a href="#">Шаблоны презентаций</a></li>
+          <li class="menu__item"><a href="#">Иконки</a></li>
+        </ul>
+      </nav>
+      <div class="header__links">
+        <a href="#" class="header__link">Обучение</a>
+        <a href="#" class="header__link">Тарифы</a>
+      </div>
+      <div class="header__basket">
+        <div class="header__icon">
+          <div class="header__number">13</div>
+          <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-basket"></use>
+          </svg>
+        </div>
+        <span>Корзина</span>
+      </div>
+      <div class="header__cabinet">
+        <div class="header__icon">
+          <svg width="31" height="32" viewBox="0 0 31 32" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon-cabinet"></use>
+          </svg>
+        </div>
+        <span>Войти</span>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <section class="promo">
+      <div class="wrapper">
+        <h1 class="promo__title">Слайды и инфографика для презентаций</h1>
+        <p class="promo__subtitle">Постоянно растущая библиотека слайдов и шаблонов для презентаций на каждый день</p>
+        <div class="search">
+          <form action="#" class="search__form">
+            <input type="text" class="search__input" placeholder="Поиск">
+            <button type="submit" class="search__btn">
+              <svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="popular">
+      <div class="wrapper">
+        <div class="swiper-container popular__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-1.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-2.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-3.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-4.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-5.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-6.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-7.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-8.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-9.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-10.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-11.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+            <div class="swiper-slide popular__slide">
+              <div class="popular__img">
+                <img src="img/images/work-12.jpg" alt="Annual Report Google Slides">
+                <div class="popular__overlay">
+                  <a href="#" class="popular__btn popular__btn--view" title="Посмотреть">
+                    <svg width="29" height="18" viewBox="0 0 29 18" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-eye"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="popular__btn popular__btn--buy" title="Купить">
+                    <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+                      <use href="#icon-basket"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="popular__info">
+                <div class="popular__number">5 продаж</div>
+                <a href="#" class="popular__category">Бизнес</a>
+                <a href="#" class="popular__title">Annual Report Google Slides</a>
+                <div class="popular__author">Автор: <a href="#">Александр Малис</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination popular__pagination"></div>
+          <div class="swiper-button-prev popular__prev"></div>
+          <div class="swiper-button-next popular__next"></div>
+        </div>
+        <a href="#" class="btn popular__more">В каталог</a>
+      </div>
+    </section>
+    
+    <section class="infographics">
+      <div class="wrapper">
+        <div class="infographics__wrap">
+          <div class="infographics__text">
+            <p class="infographics__subtitle">Привлекает внимание</p>
+            <p class="infographics__title"><span>Инфографика,</span><span>которая</span> захватывает дух</p>
+            <p>Теперь скучная инфографика и унылые слайды в прошлом. С GoodSlide вы легко создадите яркую и запоминающуюся презентацию, вызывающую восхищение и притягивающую взгляд</p>
+          </div>
+          <figure class="infographics__img">
+            <img src="img/images/img-1.png" alt="Инфографика">
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="infographics infographics--left">
+      <div class="wrapper">
+        <div class="infographics__wrap">
+          <div class="infographics__text">
+            <p class="infographics__subtitle">Легко редактируется</p>
+            <p class="infographics__title"><span>Инфографика,</span><span>совместимая с</span> PowerPoint, Keynote и Google Slides</p>
+            <p>Не нужно обладать специальными знаниями, чтобы пользоваться инфографикой. Полностью редактируемые слайды легко настраиваются под любые задачи: меняйте цвет, редактируйте текст, добавляйте фото и другие необходимые элементы.</p>
+          </div>
+          <figure class="infographics__img">
+            <img src="img/images/img-2.png" alt="Инфографика">
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="infographics">
+      <div class="wrapper">
+        <div class="infographics__wrap">
+          <div class="infographics__text">
+            <p class="infographics__subtitle">Экономит время</p>
+            <p class="infographics__title">Не тратьте свое время <span>на дизайн</span></p>
+            <p>Сообщество GoodSlide объединяет сотни дизайнеров, которые ежедневно создают великолепную инфографику под любые задачи. Зачем тратить время на дизайн презентации, когда можно просто выбрать готовые слайды, а сэкономленное время посвятить подготовке к вашему выступлению</p>
+          </div>
+          <figure class="infographics__img">
+            <img src="img/images/img-3.png" alt="Инфографика">
+          </figure>
+        </div>
+      </div>
+    </section>
+    
+    <section class="tariff">
+      <div class="wrapper">
+        <p class="title">Тарифный план</p>
+        <p class="tariff__subtitle">Выберите свой тарифный план, который наиболее подходит для решения ваших задач</p>
+        <ul class="tariff__list">
+          <li class="tariff__item">
+            <p class="tariff__title">Новичок</p>
+            <div class="tariff__number"><span>5</span>слайдов</div>
+            <div class="tariff__text">Всего один платеж в размере 300₽ дает вам самый большой выбор профессиональной инфографики сегодня!</div>
+            <p class="tariff__price">250<i class="fas fa-ruble-sign"></i></p>
+            <a href="#" class="btn tariff__btn">купить</a>
+          </li>
+          <li class="tariff__item">
+            <p class="tariff__title">Любитель</p>
+            <div class="tariff__number"><span>15</span>слайдов</div>
+            <div class="tariff__text">Всего один платеж в размере 300₽ дает вам самый большой выбор профессиональной инфографики сегодня!</div>
+            <p class="tariff__price">600<i class="fas fa-ruble-sign"></i></p>
+            <a href="#" class="btn tariff__btn">купить</a>
+          </li>
+          <li class="tariff__item">
+            <p class="tariff__title">Профессионал</p>
+            <div class="tariff__number"><span>30</span>слайдов</div>
+            <div class="tariff__text">Всего один платеж в размере 300₽ дает вам самый большой выбор профессиональной инфографики сегодня!</div>
+            <p class="tariff__price">900<i class="fas fa-ruble-sign"></i></p>
+            <a href="#" class="btn tariff__btn">купить</a>
+          </li>
+          <li class="tariff__item">
+            <p class="tariff__title">Корпоративный</p>
+            <div class="tariff__number"><span><i class="fas fa-infinity"></i></span>слайдов</div>
+            <div class="tariff__text">Всего один платеж в размере 300₽ дает вам самый большой выбор профессиональной инфографики сегодня!</div>
+            <p class="tariff__price">2990<i class="fas fa-ruble-sign"></i><span>Месяц</span></p>
+            <a href="#" class="btn tariff__btn">купить</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="faq">
+      <div class="wrapper">
+        <p class="title">Часто задаваемые вопросы</p>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button type="button" class="faq__question">Могу ли я поменять цвет на наш корпоративный?</button>
+            <div class="faq__dropdown">
+              <p>Да, конечно. Все наши слайды настроены таким образом, что они автоматически перекрашиваются в палитру вашей презентации</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question">Можно поменять текст на слайде?</button>
+            <div class="faq__dropdown">
+              <p>Да, конечно. Все наши слайды настроены таким образом, что они автоматически перекрашиваются в палитру вашей презентации</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question">С какими программами совместима инфографика?</button>
+            <div class="faq__dropdown">
+              <p>Да, конечно. Все наши слайды настроены таким образом, что они автоматически перекрашиваются в палитру вашей презентации></p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question">У меня нет опыта дизайна. Смогу ли я создать действительно красивую презентацию?</button>
+            <div class="faq__dropdown">
+              <p>Да, конечно. Все наши слайды настроены таким образом, что они автоматически перекрашиваются в палитру вашей презентации</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button type="button" class="faq__question">Какая лицензия распространяется на слайды и шаблоны презентаций?</button>
+            <div class="faq__dropdown">
+              <p>Да, конечно. Все наши слайды настроены таким образом, что они автоматически перекрашиваются в палитру вашей презентации</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <div class="logo">
+            <img src="img/images/logo.png" alt="Logo">
+          </div>
+          <div class="footer__slogan">Высококачественные шаблоны инфографики для ваших задач.</div>
+          <ul class="payment">
+            <li class="payment__item">
+              <img src="img/icons/visa.png" alt="Visa">
+            </li>
+            <li class="payment__item">
+              <img src="img/icons/master.png" alt="MasterCard">
+            </li>
+            <li class="payment__item">
+              <img src="img/icons/wallet.png" alt="Wallet">
+            </li>
+            <li class="payment__item">
+              <img src="img/icons/mir.png" alt="Mir">
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu">
+          <p class="footer__title">Продукты</p>
+          <ul class="footer__list">
+            <li><a href="#">Инфографика</a></li>
+            <li><a href="#">Шаблоны презентаций</a></li>
+            <li><a href="#">Иконки</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu">
+          <p class="footer__title">потребителю</p>
+          <ul class="footer__list">
+            <li><a href="#">Тарифы</a></li>
+            <li><a href="#">Обучение</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu">
+          <p class="footer__title">информация</p>
+          <ul class="footer__list">
+            <li><a href="#">Стать автором</a></li>
+            <li><a href="#">Лицензия</a></li>
+            <li><a href="#">Оферта</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu">
+          <p class="footer__title">Помощь</p>
+          <ul class="footer__list">
+            <li><a href="#">Часто задаваемые вопросы</a></li>
+            <li><a href="#">Связаться с нами</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2018 Slideseller. All rights reserved.</span>
+        <ul class="social">
+          <li class="social__item">
+            <a href="" class="social__link" title="Istagram"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link" title="Odnoklassniki"><i class="fab fa-odnoklassniki"></i></a>
+          </li>
+          <li class="social__item">
+            <a href="" class="social__link" title="VKontakte"><i class="fab fa-vk"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+</body>
+</html>
