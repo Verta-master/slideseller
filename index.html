@@ -13,8 +13,8 @@
 <body>
   <svg style="display:none">
     <symbol id="icon-search">
-      <circle r="6.80459" transform="matrix(0.707106 0.707107 -0.707106 0.707107 11.0503 11.0776)" stroke-width="1.94417"/>
-      <rect width="7.57115" height="1.94417" transform="matrix(0.707106 0.707108 -0.707106 0.707108 16.0911 15.2018)"/>
+      <circle r="6.80459" transform="matrix(0.707106 0.707107 -0.707106 0.707107 11.0503 11.0776)" stroke="white" stroke-width="1.94417"/>
+      <rect width="7.57115" height="1.94417" transform="matrix(0.707106 0.707108 -0.707106 0.707108 16.0911 15.2018)" fill="white"/>
     </symbol>
     <symbol id="icon-basket">
       <path d="M26.8 30.8C27 30.6 27.1 30.3 27.1 30L24.8 8.30005C24.7 7.80005 24.3 7.40005 23.8 7.40005H19.7001V6.50005C19.7001 3.40005 17.2 0.800049 14 0.800049C10.9 0.800049 8.30005 3.30005 8.30005 6.50005V7.30005H4.20005C3.70005 7.30005 3.20005 7.70005 3.20005 8.20005L0.800049 30C0.800049 30.3 0.900049 30.6 1.10005 30.8C1.30005 31 1.60005 31.1 1.90005 31.1H26.1C26.4 31.1 26.6 31 26.8 30.8ZM26.8 30.8L26.7001 30.7001L26.8 30.8ZM26.8 30.8L26.7001 30.7001L26.8 30.8ZM10.4 6.50005C10.4 4.50005 12 2.90005 14 2.90005C16 2.90005 17.6 4.50005 17.6 6.50005V7.30005H10.4V6.50005ZM22.8 9.40005L24.9 29H3.00005L5.10005 9.40005H8.30005V11.2C8.30005 11.8 8.80005 12.2 9.30005 12.2C9.90005 12.2 10.3 11.7 10.3 11.2V9.40005H17.5V11.2C17.5 11.8 18 12.2 18.5 12.2C19.1 12.2 19.5 11.7 19.5 11.2V9.40005H22.8Z" stroke-width="0.3"/>
@@ -126,19 +126,22 @@
   <main>
     <section class="promo">
       <div class="wrapper">
-        <h1 class="promo__title">Слайды и инфографика для презентаций</h1>
+        <h1 class="title">Слайды и инфографика для презентаций</h1>
         <p class="promo__subtitle">Постоянно растущая библиотека слайдов и шаблонов для презентаций на каждый день</p>
         <div class="search">
           <form action="#" class="search__form">
             <input type="text" class="search__input" placeholder="Поиск">
             <button type="submit" class="search__btn">
-              <svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+              <svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg" fill="none">
                 <use href="#icon-search"></use>
               </svg>
             </button>
           </form>
         </div>
       </div>
+      <figure class="promo__img">
+        <img src="img/images/bg-main.png" alt="Слайды и инфографика для презентаций">
+      </figure>
     </section>
     
     <section class="popular">
