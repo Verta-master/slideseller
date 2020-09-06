@@ -1,0 +1,148 @@
+.header__wrap {
+  padding-top: 40px;
+  padding-bottom: 18px;
+}
+
+.header__wrap,
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link {
+  display: block;
+  margin-left: 20px;
+  margin: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4E2BFF;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @black;
+    .transition();
+  }
+}
+
+.header__basket,
+.header__cabinet {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  
+  span {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    span {
+      color: @blue;
+      .transition();
+    }
+    
+    .header__icon svg {
+      fill: @black;
+      .transition();
+    }
+  }
+}
+
+.header__number {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: 5;
+  width: 20px;
+  height: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF5200;
+  border-radius: 50%;
+}
+
+.header__icon svg {
+  display: block;
+  margin: 0 auto;
+  fill: @blue;
+  .transition();
+}
+
+.header__cabinet {
+  &:hover {
+    .header__dropdown {
+      display: block;
+    }
+  }
+}
+
+.header__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  padding-top: 30px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+}
+
+.header__block {
+  width: 182px;
+  padding-top: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px #DCE0E6;
+  border-radius: 6px;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #9292A6;
+  border-bottom: 1px solid #F0F0F0;
+  .transition();
+  
+  &:last-child {
+    border-bottom: 0;
+  }
+  
+  svg {
+    margin-right: 14px;
+    fill: #9292A6;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    color: @blue;
+    .transition();
+    
+    svg {
+      fill: @blue;
+      .transition();
+    }
+  }
+}
