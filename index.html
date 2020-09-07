@@ -560,7 +560,7 @@
       <div class="footer__top">
         <div class="footer__logo">
           <div class="logo">
-            <img src="img/images/logo.png" alt="Logo">
+            <img src="img/images/logo-footer.png" alt="Logo">
           </div>
           <div class="footer__slogan">Высококачественные шаблоны инфографики для ваших задач.</div>
           <ul class="payment">
@@ -633,5 +633,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="js/popular-slider.js"></script>
+  
+  <script>
+    //Faq list
+    $('.faq__question').click(function() {
+      $(this).next().slideToggle();
+    });
+  </script>
 </body>
 </html>

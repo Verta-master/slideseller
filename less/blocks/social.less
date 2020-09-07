@@ -1,0 +1,27 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.social__item {
+  margin-left: 35px;
+}
+
+.social__link {
+  width: 20px;
+  height: 20px;
+  display: block;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  .transition();
+  
+  &:hover,
+  &:active {
+    opacity: 0.7;
+    .transition();
+  }
+}
