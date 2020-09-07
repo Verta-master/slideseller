@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Title</title>
+  <title>GoodSlide</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
@@ -86,37 +86,39 @@
         <a href="#" class="header__link">Обучение</a>
         <a href="#" class="header__link">Тарифы</a>
       </div>
-      <a href="#" class="header__basket">
-        <div class="header__icon">
-          <div class="header__number">13</div>
-          <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-basket"></use>
-          </svg>
-        </div>
-        <span>Корзина</span>
-      </a>
-      <div href="#" class="header__cabinet">
-        <div class="header__icon">
-          <svg width="31" height="32" viewBox="0 0 31 32" xmlns="http://www.w3.org/2000/svg">
-            <use href="#icon-cabinet"></use>
-          </svg>
-        </div>
-        <span>Войти</span>
-        <div class="header__dropdown">
-          <div class="header__block">
-            <a data-fancybox="" data-src="#reg" href="javascript:;" class="header__user header__user--cabinet">
-              <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="8" cy="4.06349" rx="4" ry="4.06349"></ellipse>
-                <path d="M8 10C3.58172 10 0 13.134 0 17H16C16 13.134 12.4183 10 8 10Z"></path>
-              </svg>
-              Личный кабинет
-            </a>
-            <a href="#" class="header__user header__user--exit">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <use href="#icon-logout"></use>
-              </svg>
-              Выход
-            </a>
+      <div class="header__private">
+        <a href="#" class="header__basket">
+          <div class="header__icon">
+            <div class="header__number">13</div>
+            <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-basket"></use>
+            </svg>
+          </div>
+          <span>Корзина</span>
+        </a>
+        <div href="#" class="header__cabinet">
+          <div class="header__icon">
+            <svg width="31" height="32" viewBox="0 0 31 32" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-cabinet"></use>
+            </svg>
+          </div>
+          <span>Войти</span>
+          <div class="header__dropdown">
+            <div class="header__block">
+              <a data-fancybox="" data-src="#reg" href="javascript:;" class="header__user header__user--cabinet">
+                <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="8" cy="4.06349" rx="4" ry="4.06349"></ellipse>
+                  <path d="M8 10C3.58172 10 0 13.134 0 17H16C16 13.134 12.4183 10 8 10Z"></path>
+                </svg>
+                Личный кабинет
+              </a>
+              <a href="#" class="header__user header__user--exit">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="#icon-logout"></use>
+                </svg>
+                Выход
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -637,6 +639,8 @@
       <input type="email" id="email" class="modal__input">
       <label for="password" class="modal__label">Пароль</label>
       <input type="password" id="password" class="modal__input">
+      <input type="checkbox" id="checkbox" class="modal__checkbox">
+      <label for="checkbox" class="modal__label-checkbox">Я не робот</label>
       <div class="modal__btns">
         <a href="#" class="modal__link">Регистрация</a>
         <button type="submit" class="btn modal__btn">Вход</button>
@@ -655,15 +659,15 @@
       <input type="email" id="email2" class="modal__input">
       <label for="password2" class="modal__label">Пароль</label>
       <input type="password" id="password2" class="modal__input">
-      <div class="modal__label">Пароль</div>
+      <div class="modal__label">Пол</div>
       <div class="modal__wrap">
         <input type="radio" name="radio" id="radio1" class="modal__radio" checked="">
         <label for="radio1" class="modal__radio-label">Мужской</label>
         <input type="radio" name="radio" id="radio2" class="modal__radio">
         <label for="radio2" class="modal__radio-label">Женский</label>
       </div>
-      <input type="checkbox" id="checkbox" class="modal__checkbox">
-      <label for="checkbox" class="modal__label-checkbox">Я не робот</label>
+      <input type="checkbox" id="checkbox2" class="modal__checkbox">
+      <label for="checkbox2" class="modal__label-checkbox">Я не робот</label>
       <div class="modal__btns">
         <a href="#" class="modal__link">Вход</a>
         <button type="submit" class="btn modal__btn">Регистрация</button>
