@@ -1,5 +1,5 @@
 .header__wrap {
-  padding-top: 40px;
+  padding-top: 23px;
   padding-bottom: 18px;
 }
 
@@ -75,11 +75,14 @@
 .header__icon svg {
   display: block;
   margin: 0 auto;
+  margin-bottom: 4px;
   fill: @blue;
   .transition();
 }
 
 .header__cabinet {
+  margin-left: 30px;
+  
   &:hover {
     .header__dropdown {
       display: block;
@@ -145,4 +148,11 @@
       .transition();
     }
   }
+}
+
+.header__private {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 15px;
 }

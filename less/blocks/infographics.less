@@ -1,7 +1,7 @@
 .infographics {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 40px;
+//  padding-top: 120px;
+//  padding-bottom: 40px;
   overflow: hidden;
   
   &--left {
@@ -13,18 +13,29 @@
     
     .infographics__img {
       position: absolute;
-      right: 40%;
+      right: 38%;
       top: 50%;
       transform: translateY(-50%);
       width: 1054px;
     }
+    
+    .infographics__text {
+      padding-top: 55px;
+    }
+    
+    .infographics__title {
+      margin-right: 0;
+    }
   }
   
   &--right {
+    padding-top: 85px;
+    padding-bottom: 255px;
+    
     .infographics__img {
       position: absolute;
-      left: 50%;
-      top: 50%;
+      left: 55%;
+      top: 45%;
       transform: translateY(-50%);
       width: 1221px;
     }
@@ -35,6 +46,7 @@
   }
   
   &--bg {
+    padding-top: 120px;
     background-image: url(../img/images/bg-2.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +54,7 @@
     
     .infographics__img {
       width: 847px;
-      margin-right: -100px;
+      margin-right: -150px;
     }
   }
 }
@@ -50,11 +62,12 @@
 .infographics__wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .infographics__text {
   width: 470px;
+  padding-top: 80px;
   color: #9292A6;
   line-height: 1.8;
 }
