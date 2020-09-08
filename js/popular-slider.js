@@ -24,18 +24,7 @@ var enableSwiper2 = function() {
     preventClicks: false,
     preventClicksPropagation: false,
     spaceBetween: 30,
-    slidesPerView: 4,
-      breakpoints: {
-        1022: {
-          slidesPerView: 3,
-        },
-        766: {
-          slidesPerView: 2,
-        },
-        480: {
-          slidesPerView: 1,
-        }
-      }
+    slidesPerView: 'auto',
   })
 };
 
