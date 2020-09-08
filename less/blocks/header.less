@@ -48,11 +48,6 @@
       color: @blue;
       .transition();
     }
-    
-    .header__icon svg {
-      fill: @black;
-      .transition();
-    }
   }
 }
 
@@ -110,12 +105,27 @@
   }
 }
 
+.header__login {
+  width: 328px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px #DCE0E6;
+  border-radius: 6px;
+}
+
 .header__block {
   width: 182px;
   padding-top: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 30px #DCE0E6;
   border-radius: 6px;
+  
+  &--hidden {
+    display: none;
+  }
 }
 
 .header__user {
