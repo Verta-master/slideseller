@@ -230,8 +230,8 @@
                       <div class="sidebar__dropdown">
                         <input type="checkbox" id="checkbox1" class="checkbox" checked="">
                         <label for="checkbox1" class="checkbox-label">PowerPoint</label>
-                        <input type="checkbox" id="checkbox2" class="checkbox">
-                        <label for="checkbox2" class="checkbox-label">Keynote</label>
+                        <input type="checkbox" id="checkbox02" class="checkbox">
+                        <label for="checkbox02" class="checkbox-label">Keynote</label>
                         <input type="checkbox" id="checkbox3" class="checkbox">
                         <label for="checkbox3" class="checkbox-label">Google Slides</label>
                       </div>
@@ -595,7 +595,7 @@
     
     <section class="hit">
       <div class="wrapper">
-        <p class="title">Популярные работы</p>
+        <p class="title-2">Популярные работы</p>
         <div class="hit__wrap">
           <div class="swiper-container hit__slider">
             <div class="swiper-wrapper">
@@ -887,7 +887,7 @@
     <section class="info">
       <div class="wrapper">
         <div class="info__block">
-          <p class="title">Идеально подходит для всех</p>
+          <p class="title-2">Идеально подходит для всех</p>
           <p>Основателям проекта Slide seller пришла в голову идея собраться вместе – на единой творческой платформе Slideseller.com -дизайнеры и творческие люди, которые создают профессиональные Шаблоны презентаций в PowerPoint, Keynote и Google sl.</p>
           <p>Согласно статистике, специалист тратит 80% своего времени на создание презентации и только 20% - на подготовку к публичному выступлению. Это в конечном счете делает его речь менее эффективной. Вам больше не нужно тратить свое время на разработку презентации. Выберите готовый шаблон на нашем сайте и сосредоточьте свое время на публичных выступлениях.</p>
           <p>Вы хотите стать автором и продавать свои работы миллионам клиентов на международной креативной платформе Slideseller? Наши лучшие авторы продают свои работы за тысячи долларов в месяц. Почему все больше и больше творческих людей выбирают продавца слайдов?</p>
@@ -1039,16 +1039,18 @@
       slidesPerView: 4,
       breakpoints: {
         1200: {
-          slidesPerView: 3,
+          slidesPerView: 'auto',
         },
-        1022: {
-          slidesPerView: 2,
-        },
-        480: {
-          slidesPerView: 1,
-        }
       }
     })
+  </script>
+  
+  <!-- Sidebar -->
+  <script>
+    $('.sidebar__link').click(function() {
+      event.preventDefault();
+      $(this).next().slideToggle();
+    });
   </script>
   
   <!-- Menu -->
