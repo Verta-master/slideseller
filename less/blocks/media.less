@@ -185,6 +185,20 @@
   .sidebar__sublist {
     display: none;
   }
+  .download--main {
+    position: relative;
+    right: 0;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .download__item {
+      margin-bottom: 0;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
 }
 
 //-------------------------------------
@@ -332,6 +346,19 @@
     position: static;
     justify-content: flex-start;
     flex-wrap: wrap;
+  }
+  .download--main .download__icon img {
+    transform: none;
+    width: 35px;
+    border-radius: 6px;
+  }
+  .download--main .download__icon {
+    border-radius: 9px;
+    padding: 4px;
+  }
+  .download--main {
+    top: 0;
+    margin-bottom: 40px;
   }
 }
 
