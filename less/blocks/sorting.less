@@ -1,0 +1,32 @@
+.sorting {
+  position: absolute;
+  top: -90px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.sorting__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  padding: 6px 10px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #9292A6;
+  border-radius: 8px;
+  background-color: rgba(146,146,166,0.1);
+  .transition();
+  
+  &:hover,
+  &:active,
+  &--active {
+    color: #fff;
+    background-color: #4E2BFF;
+    .transition();
+  }
+}
