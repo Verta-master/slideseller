@@ -104,7 +104,12 @@
           </div>
           <span>Войти</span>
           <div class="header__dropdown">
-            <div class="header__block">
+            <div class="header__login">
+              <a data-fancybox="" data-src="#enter" href="javascript:;" class="modal__link">Вход</a>
+              <a data-fancybox="" data-src="#reg" href="javascript:;" type="submit" class="btn modal__btn modal__btn--reg">Регистрация</a>
+            </div>
+            <!--   Show next block if logged   -->
+            <div class="header__block header__block--hidden">
               <a data-fancybox="" data-src="#reg" href="javascript:;" class="header__user header__user--cabinet">
                 <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="8" cy="4.06349" rx="4" ry="4.06349"></ellipse>
@@ -119,6 +124,7 @@
                 Выход
               </a>
             </div>
+            <!--   End of the block      -->
           </div>
         </div>
       </div>
@@ -670,7 +676,7 @@
       <label for="checkbox2" class="modal__label-checkbox">Я не робот</label>
       <div class="modal__btns">
         <a href="#" class="modal__link">Вход</a>
-        <button type="submit" class="btn modal__btn">Регистрация</button>
+        <button type="submit" class="btn modal__btn modal__btn--reg">Регистрация</button>
       </div>
     </form>
   </div>
