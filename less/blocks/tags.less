@@ -1,0 +1,39 @@
+.tags {
+  color: #9292A6;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.tags__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: -10px;
+  margin-top: 16px;
+}
+
+.tags__item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tags__link {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 9px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #0C2140;
+  border: 1px solid #9292A6;
+  border-radius: 2px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @blue;
+    border-color: @blue;
+    .transition();
+  }
+}
