@@ -134,6 +134,12 @@
   </header>
   
   <div id="page">
+    <div class="mh-head Sticky">
+      <span class="mh-btns-left">
+        <a href="#menu" class="fa fa-bars"></a>
+        <a href="#page" class="fa fa-close"></a>
+      </span>
+    </div>
     <nav id="menu">
       <ul id="panel-menu">
         <li><a href="#">Инфографика</a>
@@ -168,6 +174,7 @@
         <li><a href="#">Шаблоны презентаций</a></li>
         <li><a href="#">Иконки</a></li>
       </ul>
+<!--
       <div class="mobile">
         <div class="mobile__block">
           <a href="#" class="mobile__link">Обучение</a>
@@ -191,6 +198,7 @@
           </ul>
         </div>
       </div>
+-->
     </nav>
   </div>
   
@@ -780,11 +788,11 @@
     new Mmenu(document.querySelector('#menu'));
 
     document.addEventListener('click', function (evnt) {
-      var anchor = evnt.target.closest('a[href^="#/"]');
-      if (anchor) {
-        alert("Thank you for clicking, but that's a demo link.");
-        evnt.preventDefault();
-      }
+        var anchor = evnt.target.closest('a[href^="#/"]');
+        if (anchor) {
+            alert("Thank you for clicking, but that's a demo link.");
+            evnt.preventDefault();
+        }
     });
   </script>
 </body>
