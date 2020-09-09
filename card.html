@@ -133,67 +133,6 @@
     </div>
   </header>
   
-  <div id="page">
-    <nav id="menu">
-      <ul id="panel-menu">
-        <li><a href="#">Инфографика</a>
-          <ul>
-            <li><a href="#">Стартап</a></li>
-            <li><a href="#">Пазл</a></li>
-            <li><a href="#">Персонажи</a></li>
-            <li><a href="#">Метафора</a></li>
-            <li><a href="#">3D</a></li>
-            <li><a href="#">Гаджет</a></li>
-            <li><a href="#">Карты</a></li>
-            <li><a href="#">Фото</a></li>
-            <li><a href="#">Тайм-лайм</a></li>
-            <li><a href="#">Процесс</a></li>
-            <li><a href="#">Пирамида</a></li>
-            <li><a href="#">Диаграмма</a></li>
-            <li><a href="#">Таблица</a></li>
-            <li><a href="#">Стрелки</a></li>
-            <li><a href="#">Планирование</a></li>
-            <li><a href="#">Анализ</a></li>
-            <li><a href="#">Воронки</a></li>
-            <li><a href="#">Диаграммы</a></li>
-            <li><a href="#">Цитаты</a></li>
-            <li><a href="#">Календарь</a></li>
-            <li><a href="#">Демография</a></li>
-            <li><a href="#">Недвижимость</a></li>
-            <li><a href="#">Логистика</a></li>
-            <li><a href="#">Медицина</a></li>
-            <li><a href="#">Образование</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Шаблоны презентаций</a></li>
-        <li><a href="#">Иконки</a></li>
-      </ul>
-      <div class="mobile">
-        <div class="mobile__block">
-          <a href="#" class="mobile__link">Обучение</a>
-          <a href="#" class="mobile__link">Тарифы</a>
-        </div>
-        <div class="mobile__bottom">
-          <span>© 2018 Slideseller. All rights reserved.</span>
-          <ul class="social">
-            <li class="social__item">
-              <a href="" class="social__link" title="Istagram"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link" title="Odnoklassniki"><i class="fab fa-odnoklassniki"></i></a>
-            </li>
-            <li class="social__item">
-              <a href="" class="social__link" title="VKontakte"><i class="fab fa-vk"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-  
   <main>
     <div class="search search--internal">
       <div class="wrapper">
@@ -818,19 +757,6 @@
       },
       thumbs: {
         swiper: galleryThumbs
-      }
-    });
-  </script>
-  
-  <!-- Menu -->
-  <script>
-    new Mmenu(document.querySelector('#menu'));
-
-    document.addEventListener('click', function (evnt) {
-      var anchor = evnt.target.closest('a[href^="#/"]');
-      if (anchor) {
-        alert("Thank you for clicking, but that's a demo link.");
-        evnt.preventDefault();
       }
     });
   </script>

@@ -85,13 +85,92 @@
     margin-right: 15px;
     margin-bottom: 10px;
   }
-  .mm-navbar__btn,
-  .mm-navbar__title,
-  .mm-panel {
-    background-color: #ffffff !important;
+  .mm-menu {
+    --mm-color-background: #fff;
+    --mm-color-text: @black;
+    z-index: 2000;
   }
-  .mm-menu_offcanvas {
-    z-index: 1100;
+  .mm-navbar {
+    --mm-color-border: rgba(255,255,255,0);
+    --mm-color-background: #EDF3FB;
+    --mm-color-text-dimmed: @black;
+    --mm-navbar-size: 81px;
+    box-sizing: border-box;
+  }
+  .mm-navbar__title {
+    background-color: #EDF3FB;
+  }
+  .mm-navbars_top  {
+    font-size: 14px;
+    line-height: 17px;
+    color: #0C2140;
+    background: #EDF3FB;
+    border-bottom: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease 0.3s;
+  }
+  .mm-wrapper_opening .mm-navbars_top  {
+    transform: translateY(0%);
+  }
+  .mm-navbar,
+  .mm-panels,
+  .mm-panels > .mm-panel  {
+    background: none !important;
+  }
+  .mm-navbar .mm-btn_prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 40px;
+  }
+  .mm-searchfield {
+    height: 60px;
+    padding: 0 0 0 20px;
+    position: relative;
+  }
+  .mm-searchfield__input {
+    padding-left: 10px !important;
+  }
+  .mm-searchfield input {
+    background: none !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    height: 45px;
+  }
+  .mm-listview {
+    padding-top: 40px;
+  }
+  .mm-listitem {
+    --mm-color-border: rgba(255,255,255,0);
+  }
+  .mm-listitem > a,
+  .mm-listitem > span {
+    font-size: 16px;
+    padding: 10px 10px 10px 25px;
+  }
+  .mm-divider {
+    padding-left: 40px;
+    background: transparent;
+  }
+  .mm-btn:after,
+  .mm-btn:before {
+    --mm-color-button: @blue;
+//    width: 15px;
+//    height: 15px;
+  }
+  .mm-btn_close:before {
+    right: 4px;
+  }
+  .mm-listitem {
+    color: #9292A6 !important;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .mm-listitem__btn:not(.mm-listitem__text) {
+    border-left: 0;
   }
 }
 
