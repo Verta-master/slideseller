@@ -1995,7 +1995,7 @@ a.breadcrumbs__link:active {
   height: auto;
 }
 .card {
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 .card__wrap {
   display: -webkit-box;
@@ -2028,9 +2028,11 @@ a.breadcrumbs__link:active {
 }
 .card__about h1 {
   color: #0C2140;
+  font-weight: bold;
+  font-size: 28px;
 }
 .card__slider {
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 .card__thumb,
 .card__slide {
@@ -2062,6 +2064,7 @@ a.breadcrumbs__link:active {
   margin-bottom: 26px;
 }
 .card__thumb {
+  width: 118px;
   border: 3px solid rgba(146, 146, 166, 0.15);
 }
 .gallery-thumbs .swiper-slide-thumb-active {
@@ -2102,7 +2105,7 @@ a.breadcrumbs__link:active {
 }
 .card__table {
   margin-top: 30px;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 .card__table table {
   width: 100%;
@@ -2152,7 +2155,7 @@ a.breadcrumbs__link:active {
 .card__img {
   width: 54px;
   height: 54px;
-  margin-right: 11px;
+  margin-right: 8px;
   border-radius: 50%;
 }
 .card__img img {
@@ -2169,6 +2172,7 @@ a.breadcrumbs__link:active {
   font-weight: 500;
   font-size: 13px;
   line-height: 1;
+  text-align: center;
   color: #4E2BFF;
   border-radius: 4px;
   background-color: rgba(12, 33, 64, 0.05);
@@ -2447,6 +2451,19 @@ a.breadcrumbs__link:active {
     margin-left: 8px;
     margin-right: 8px;
   }
+  .card__view,
+  .card__wrap {
+    display: block;
+  }
+  .card__view,
+  .card__info {
+    width: 100%;
+  }
+  .card__btn {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media (max-width: 766px) {
   h1,
@@ -2620,8 +2637,15 @@ a.breadcrumbs__link:active {
     top: 0;
     margin-bottom: 40px;
   }
+  .card__next {
+    right: 0;
+  }
+  .card__prev {
+    left: 0;
+  }
 }
 @media (max-width: 480px) {
+  .card__btn,
   .catalog__more,
   .sidebar {
     width: 100%;
