@@ -27,8 +27,3 @@ $('.nav__mobile').click(function() {
   $('.nav__close-back').addClass('nav__close-back--show');
   $('.nav__close').addClass('nav__close--hide');
 });
-
-// Scrollbar 
-  $('.modal__wrap').niceScroll();
-  $('.nav__wrap .wrapper').niceScroll();
-  $('.nav__sublist').niceScroll();
