@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-  <link rel="stylesheet" href="css/mmenu.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -46,7 +45,7 @@
         <img src="img/images/logo.png" alt="Logo">
       </div>
       <nav class="menu">
-        <a href="#menu" class="menu__btn"></a>
+        <a href="#" class="menu__btn"></a>
         <ul class="menu__list">
           <li class="menu__item menu__item--dropdown">
             <a href="#">Инфографика</a>
@@ -133,49 +132,52 @@
     </div>
   </header>
   
-  <div id="page">
-    <div class="mh-head Sticky">
-      <span class="mh-btns-left">
-        <a href="#menu" class="fa fa-bars"></a>
-        <a href="#page" class="fa fa-close"></a>
-      </span>
-    </div>
-    <nav id="menu">
-      <ul id="panel-menu">
-        <li><a href="#">Инфографика</a>
-          <ul>
-            <li><a href="#">Стартап</a></li>
-            <li><a href="#">Пазл</a></li>
-            <li><a href="#">Персонажи</a></li>
-            <li><a href="#">Метафора</a></li>
-            <li><a href="#">3D</a></li>
-            <li><a href="#">Гаджет</a></li>
-            <li><a href="#">Карты</a></li>
-            <li><a href="#">Фото</a></li>
-            <li><a href="#">Тайм-лайм</a></li>
-            <li><a href="#">Процесс</a></li>
-            <li><a href="#">Пирамида</a></li>
-            <li><a href="#">Диаграмма</a></li>
-            <li><a href="#">Таблица</a></li>
-            <li><a href="#">Стрелки</a></li>
-            <li><a href="#">Планирование</a></li>
-            <li><a href="#">Анализ</a></li>
-            <li><a href="#">Воронки</a></li>
-            <li><a href="#">Диаграммы</a></li>
-            <li><a href="#">Цитаты</a></li>
-            <li><a href="#">Календарь</a></li>
-            <li><a href="#">Демография</a></li>
-            <li><a href="#">Недвижимость</a></li>
-            <li><a href="#">Логистика</a></li>
-            <li><a href="#">Медицина</a></li>
-            <li><a href="#">Образование</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Шаблоны презентаций</a></li>
-        <li><a href="#">Иконки</a></li>
-      </ul>
-<!--
-      <div class="mobile">
+  <!-- Mobile menu -->
+  <div class="mobile mobile--menu">
+    <div class="mobile__wrap">
+      <div class="mobile__top">
+        <button type="button" class="nav__close">Закрыть</button>
+      </div>
+      <div class="mobile__body">
+        <ul class="mobile__list">
+          <li class="mobile__item">
+            <a href="#" class="mobile__nav-link">Инфографика</a>
+            <button type="button" class="mobile__nav-btn"><i class="fas fa-angle-down"></i></button>
+            <ul class="mobile__sublist">
+              <li class="mobile__subitem"><a href="#">Стартап</a></li>
+              <li class="mobile__subitem"><a href="#">Пазл</a></li>
+              <li class="mobile__subitem"><a href="#">Персонажи</a></li>
+              <li class="mobile__subitem"><a href="#">Метафора</a></li>
+              <li class="mobile__subitem"><a href="#">3D</a></li>
+              <li class="mobile__subitem"><a href="#">Гаджет</a></li>
+              <li class="mobile__subitem"><a href="#">Карты</a></li>
+              <li class="mobile__subitem"><a href="#">Фото</a></li>
+              <li class="mobile__subitem"><a href="#">Тайм-лайм</a></li>
+              <li class="mobile__subitem"><a href="#">Процесс</a></li>
+              <li class="mobile__subitem"><a href="#">Пирамида</a></li>
+              <li class="mobile__subitem"><a href="#">Диаграмма</a></li>
+              <li class="mobile__subitem"><a href="#">Таблица</a></li>
+              <li class="mobile__subitem"><a href="#">Стрелки</a></li>
+              <li class="mobile__subitem"><a href="#">Планирование</a></li>
+              <li class="mobile__subitem"><a href="#">Анализ</a></li>
+              <li class="mobile__subitem"><a href="#">Воронки</a></li>
+              <li class="mobile__subitem"><a href="#">Диаграммы</a></li>
+              <li class="mobile__subitem"><a href="#">Цитаты</a></li>
+              <li class="mobile__subitem"><a href="#">Календарь</a></li>
+              <li class="mobile__subitem"><a href="#">Демография</a></li>
+              <li class="mobile__subitem"><a href="#">Недвижимость</a></li>
+              <li class="mobile__subitem"><a href="#">Логистика</a></li>
+              <li class="mobile__subitem"><a href="#">Медицина</a></li>
+              <li class="mobile__subitem"><a href="#">Образование</a></li>
+            </ul>
+          </li>
+          <li class="mobile__item">
+            <a href="#" class="mobile__nav-link">Шаблоны презентаций</a>
+          </li>
+          <li class="mobile__item">
+            <a href="#" class="mobile__nav-link">Иконки</a>
+          </li>
+        </ul>
         <div class="mobile__block">
           <a href="#" class="mobile__link">Обучение</a>
           <a href="#" class="mobile__link">Тарифы</a>
@@ -198,8 +200,7 @@
           </ul>
         </div>
       </div>
--->
-    </nav>
+    </div>
   </div>
   
   <main>
@@ -773,8 +774,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="js/popular-slider.js"></script>
-  <script src="js/mmenu.js"></script>
-  <script src="js/mmenu.polyfills.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/mobile-menu.js"></script>
   
   <!-- Faq list -->
   <script>
@@ -783,17 +784,9 @@
     });
   </script>
   
-  <!-- Menu -->
+  <!-- Scrollbar -->
   <script>
-    new Mmenu(document.querySelector('#menu'));
-
-    document.addEventListener('click', function (evnt) {
-        var anchor = evnt.target.closest('a[href^="#/"]');
-        if (anchor) {
-            alert("Thank you for clicking, but that's a demo link.");
-            evnt.preventDefault();
-        }
-    });
+    $('.mobile__wrap').niceScroll();
   </script>
 </body>
 </html>
